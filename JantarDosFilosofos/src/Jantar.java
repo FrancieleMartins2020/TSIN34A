@@ -64,47 +64,47 @@ public class Jantar extends JFrame
 		{			
 			if (status == 0)
 			{
-				ImageIcon referencia = new ImageIcon("src\\Imagens\\aristoteles.png");		
+				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo1_frente_pensando.png");		
 				arist = referencia.getImage();
 				
 			} else if (status == 1)
 			{
-				ImageIcon referencia = new ImageIcon("src\\Imagens\\aristoteles2.png");		
+				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo1_frente_garfos.png");		
 				arist = referencia.getImage();
 				
 			} else if (status == 2)
 			{
-				ImageIcon referencia = new ImageIcon("src\\Imagens\\aristoteles1.png");		
+				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo1_frente_garfo.png");		
 				arist = referencia.getImage();				
 			}
 		} else if (numeroFilosofo == 1)
 		{
 			if (status == 0)
 			{
-				ImageIcon referencia = new ImageIcon("src\\Imagens\\platao.png");		
+				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo_esquerda_pensando.png");		
 				plat = referencia.getImage();
 			} else if (status == 1)
 			{
-				ImageIcon referencia = new ImageIcon("src\\Imagens\\platao2.png");		
+				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo_esquerda_garfos.png");		
 				plat = referencia.getImage();
 			} else if (status == 2)
 			{
-				ImageIcon referencia = new ImageIcon("src\\Imagens\\platao1.png");		
+				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo_esquerda_garfo.png");		
 				plat = referencia.getImage();			
 			}
 		} else if (numeroFilosofo == 2)
 		{			
 			if (status == 0)
 			{
-				ImageIcon referencia = new ImageIcon("src\\Imagens\\descartes.png");		
+				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo2_frente_pensando.png");		
 				descar = referencia.getImage();				
 			} else if (status == 1)
 			{
-				ImageIcon referencia = new ImageIcon("src\\Imagens\\descartes2.png");		
+				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo2_frente_garfos.png");		
 				descar = referencia.getImage();				
 			} else if (status == 2)
 			{
-				ImageIcon referencia = new ImageIcon("src\\Imagens\\descartes1.png");		
+				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo2_frente_garfo.png");		
 				descar = referencia.getImage();
 			}
 		} else if (numeroFilosofo == 3)
