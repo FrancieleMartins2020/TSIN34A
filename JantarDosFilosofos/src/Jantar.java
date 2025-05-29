@@ -12,7 +12,7 @@ import javax.swing.border.EmptyBorder;
 // interface gráfica baseada na classe JFrame, que representa a janela principal da aplicação.
 public class Jantar extends JFrame 
 {	
-	private Image fundo,arist,descar,pitagor,socrat,plat,mes;
+	private Image fundo,filosofo_1,filosofo_3,pitagor,socrat,filosofo_2,mes;
 	
 	private Filosofo filosofo0, filosofo1, filosofo2, filosofo3, filosofo4;
 	
@@ -46,11 +46,11 @@ public class Jantar extends JFrame
 		
 		graficos.drawImage(fundo,0,0,null);
 		graficos.drawImage(mes, 90, 230, null);	
-		graficos.drawImage(arist, 210, 125, null);
-		graficos.drawImage(plat, 15, 295, null);			
+		graficos.drawImage(filosofo_1, 210, 125, null);
+		graficos.drawImage(filosofo_2, 15, 295, null);			
 		graficos.drawImage(socrat, 340, 495, null);
 		graficos.drawImage(pitagor, 405, 295, null);
-		graficos.drawImage(descar, 90, 490, null);			
+		graficos.drawImage(filosofo_3, 90, 490, null);			
 	}	
 	
 	public void jantar_WindowDestroy(Object target) 
@@ -65,76 +65,76 @@ public class Jantar extends JFrame
 			if (status == 0)
 			{
 				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo1_frente_pensando.png");		
-				arist = referencia.getImage();
+				filosofo_1 = referencia.getImage();
 				
 			} else if (status == 1)
 			{
 				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo1_frente_garfos.png");		
-				arist = referencia.getImage();
+				filosofo_1 = referencia.getImage();
 				
 			} else if (status == 2)
 			{
 				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo1_frente_garfo.png");		
-				arist = referencia.getImage();				
+				filosofo_1 = referencia.getImage();				
 			}
 		} else if (numeroFilosofo == 1)
 		{
 			if (status == 0)
 			{
 				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo_esquerda_pensando.png");		
-				plat = referencia.getImage();
+				filosofo_2 = referencia.getImage();
 			} else if (status == 1)
 			{
 				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo_esquerda_garfos.png");		
-				plat = referencia.getImage();
+				filosofo_2 = referencia.getImage();
 			} else if (status == 2)
 			{
 				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo_esquerda_garfo.png");		
-				plat = referencia.getImage();			
+				filosofo_2 = referencia.getImage();			
 			}
 		} else if (numeroFilosofo == 2)
 		{			
 			if (status == 0)
 			{
 				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo2_frente_pensando.png");		
-				descar = referencia.getImage();				
+				filosofo_3 = referencia.getImage();				
 			} else if (status == 1)
 			{
 				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo2_frente_garfos.png");		
-				descar = referencia.getImage();				
+				filosofo_3 = referencia.getImage();				
 			} else if (status == 2)
 			{
 				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo2_frente_garfo.png");		
-				descar = referencia.getImage();
+				filosofo_3 = referencia.getImage();
 			}
 		} else if (numeroFilosofo == 3)
 		{
 			if (status == 0)
 			{
-				ImageIcon referencia = new ImageIcon("src\\Imagens\\socrates.png");		
+				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo3_frente_pensando.png");		
 				socrat = referencia.getImage();
 			} else if (status == 1)
 			{
-				ImageIcon referencia = new ImageIcon("src\\Imagens\\socrates2.png");		
+				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo3_frente_garfos.png");		
 				socrat = referencia.getImage();			
 			} else if (status == 2)
 			{
-				ImageIcon referencia = new ImageIcon("src\\Imagens\\socrates1.png");		
+				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo3_frente_garfo.png");		
 				socrat = referencia.getImage();
 			}			
 		} else if (numeroFilosofo == 4)
 		{
 			if (status == 0)
 			{
-				ImageIcon referencia = new ImageIcon("src\\Imagens\\pitagoras.png");		
+				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo_direita_pensando.png");		
 				pitagor = referencia.getImage();
 			}else if (status == 1)
 			{
-				ImageIcon referencia = new ImageIcon("src\\Imagens\\pitagoras2.png");		
+				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo_direita_garfos.png");		
 				pitagor = referencia.getImage();			
 			} else if (status == 2)
 			{
-				ImageIcon referencia = new ImageIcon("src\\Imagens\\pitagoras1.png");		
+				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo_direita_garfo.png");		
 				pitagor = referencia.getImage();
 			}
 		}
