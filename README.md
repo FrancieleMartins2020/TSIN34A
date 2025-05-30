@@ -61,6 +61,8 @@ Filósofo 1 está pensando.
 Filósofo 1 está com fome.
 Filósofo 1 começou a comer.
 Filósofo 1 terminou de comer e voltou a pensar.
+
+Garfo1: 1 Garfo2: 1
 ```
 
 ## 🏛️ Sobre o Problema do Jantar dos Filósofos
@@ -77,16 +79,13 @@ Desafios solucionados:
 
 ```
 ├── src/
-│   ├── Main.java           // Classe principal
+│   ├── Jantar.java         // Classe principal e interface
 │   ├── Filosofo.java       // Classe que representa cada filósofo (thread)
-│   ├── Garfo.java          // Classe para controle dos garfos (recursos)
-│   └── Mesa.java           // Gerencia os filósofos, garfos e interface
-├── imagens/                // Recursos gráficos
+│   ├── Garfos.java          // Classe para controle dos garfos (recursos) - Gerencia os filósofos, garfos 
+├── Imagens/                // Recursos gráficos
 ├── README.md               // Documentação
 ```
 
 ## 🤝 Contribuição
 
 Contribuições são bem-vindas! Sinta-se livre para abrir issues e pull requests.
-
-Se quiser, posso gerar o arquivo `README.md` pronto para você. Deseja?
