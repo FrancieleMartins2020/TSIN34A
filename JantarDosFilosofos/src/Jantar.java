@@ -12,7 +12,7 @@ import javax.swing.border.EmptyBorder;
 // interface gráfica baseada na classe JFrame, que representa a janela principal da aplicação.
 public class Jantar extends JFrame 
 {	
-	private Image fundo,filosofo_1,filosofo_3,pitagor,socrat,filosofo_2,mes;
+	private Image mesa_fundo, filosofo_1, filosofo_2, filosofo_3, filosofo_4, filosofo_5;
 	
 	private Filosofo filosofo0, filosofo1, filosofo2, filosofo3, filosofo4;
 	
@@ -44,13 +44,12 @@ public class Jantar extends JFrame
 	{
 		Graphics2D graficos = (Graphics2D) g;
 		
-		graficos.drawImage(fundo,0,0,null);
-		graficos.drawImage(mes, 90, 230, null);	
-		graficos.drawImage(filosofo_1, 210, 125, null);
+		graficos.drawImage(mesa_fundo,0,0,null);
+		graficos.drawImage(filosofo_1, 210, 100, null);
 		graficos.drawImage(filosofo_2, 15, 295, null);			
-		graficos.drawImage(socrat, 340, 495, null);
-		graficos.drawImage(pitagor, 405, 295, null);
-		graficos.drawImage(filosofo_3, 90, 490, null);			
+		graficos.drawImage(filosofo_3, 90, 475, null);			
+		graficos.drawImage(filosofo_4, 340, 475, null);
+		graficos.drawImage(filosofo_5, 405, 295, null);		
 	}	
 	
 	public void jantar_WindowDestroy(Object target) 
@@ -112,30 +111,30 @@ public class Jantar extends JFrame
 			if (status == 0)
 			{
 				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo3_frente_pensando.png");		
-				socrat = referencia.getImage();
+				filosofo_4 = referencia.getImage();
 			} else if (status == 1)
 			{
 				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo3_frente_garfos.png");		
-				socrat = referencia.getImage();			
+				filosofo_4 = referencia.getImage();			
 			} else if (status == 2)
 			{
 				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo3_frente_garfo.png");		
-				socrat = referencia.getImage();
+				filosofo_4 = referencia.getImage();
 			}			
 		} else if (numeroFilosofo == 4)
 		{
 			if (status == 0)
 			{
 				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo_direita_pensando.png");		
-				pitagor = referencia.getImage();
+				filosofo_5 = referencia.getImage();
 			}else if (status == 1)
 			{
 				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo_direita_garfos.png");		
-				pitagor = referencia.getImage();			
+				filosofo_5 = referencia.getImage();			
 			} else if (status == 2)
 			{
 				ImageIcon referencia = new ImageIcon("src\\Imagens\\filosofo_direita_garfo.png");		
-				pitagor = referencia.getImage();
+				filosofo_5 = referencia.getImage();
 			}
 		}
 		
@@ -147,8 +146,8 @@ public class Jantar extends JFrame
 		setTitle("Jantar dos Filósofos -> Trabalho de Programação Concorrênte");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Jantar.class.getResource("/Imagens/Icon.png")));
 			
-		ImageIcon referencia = new ImageIcon("src\\Imagens\\fundo.png");		
-		fundo = referencia.getImage();
+		ImageIcon referencia = new ImageIcon("src\\Imagens\\mesa_fundo.png");		
+		mesa_fundo = referencia.getImage();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 515, 597);
 		contentPanel = new JPanel();
@@ -156,9 +155,7 @@ public class Jantar extends JFrame
 		setContentPane(contentPanel);
 		contentPanel.setLayout(null);
 		setResizable(false);
-		
-		referencia = new ImageIcon("src\\Imagens\\mesa.png");
-		
+				
 		//Criação do garfo compartilhado
 		garfos = new Garfos();
 		
