@@ -1,7 +1,3 @@
-Perfeito! Aqui está um modelo de README personalizado para você colocar no GitHub sobre seu trabalho do **Jantar dos Filósofos** usando Java e programação concorrente com interface gráfica e console.
-
----
-
 # 🧠🍝 Jantar dos Filósofos - Programação Concorrente
 
 ![Capa](./762333ea-7ee4-4352-b76b-6dce46af2fa9.png)
@@ -91,11 +87,5 @@ Desafios solucionados:
 ## 🤝 Contribuição
 
 Contribuições são bem-vindas! Sinta-se livre para abrir issues e pull requests.
-
-## 📄 Licença
-
-Este projeto é licenciado sob a Licença MIT.
-
----
 
 Se quiser, posso gerar o arquivo `README.md` pronto para você. Deseja?
