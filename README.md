@@ -7,7 +7,7 @@
 
 Este projeto implementa a clássica **solução do problema do Jantar dos Filósofos**, um dos problemas mais conhecidos da **Programação Concorrente**. O programa foi desenvolvido na linguagem **Java**, utilizando **threads** e **sincronização** para resolver os desafios de deadlock, starvation e concorrência.
 
-Incluímos também uma **interface gráfica intuitiva** para acompanhar visualmente o estado dos filósofos e dos garfos, além de uma saída no **console** que detalha as transições de estado em tempo real.
+Incluí também uma **interface gráfica intuitiva** para acompanhar visualmente o estado dos filósofos e dos garfos, além de uma saída no **console** que detalha as transições de estado em tempo real.
 
 ## 🎯 Objetivos do Projeto
 
@@ -27,7 +27,7 @@ Incluímos também uma **interface gráfica intuitiva** para acompanhar visualme
 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/FrancieleMartins2020/TSIN34A.git
 ```
 
 2. Compile o projeto:
