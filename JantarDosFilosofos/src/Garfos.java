@@ -22,14 +22,14 @@ public class Garfos
 		//vet_garfos[numeroFilosofo] - verifica se o garfo da esquerda está ocupado
 		//vet_garfos[((numeroFilosofo + 1) % 5)]) - verifica se o garfo da direita está ocupado
 		//Filósofo	Garfo à esquerda	Garfo à direita (com % 5)
-		//0					0				(0 + 1) % 5 = 1
-		//1					1				(1 + 1) % 5 = 2
-		//2					2				(2 + 1) % 5 = 3
-		//3					3				(3 + 1) % 5 = 4
-		//4					4				(4 + 1) % 5 = 0 
+		//1			1					(1 + 1) % 5 = 2
+		//0			0					(0 + 1) % 5 = 1
+		//2			2					(2 + 1) % 5 = 3
+		//3			3					(3 + 1) % 5 = 4
+		//4			4					(4 + 1) % 5 = 0 
 		while (vet_garfos[numeroFilosofo] || vet_garfos[((numeroFilosofo + 1) % 5)]) 
 		{
-			//Seta o estatus como Esperar
+			//Seta o status como Esperar
 			filosofo.setStatus(2);
 			try 
 			{
@@ -43,13 +43,14 @@ public class Garfos
 
 		//Metodo responsável por utilizar o  garfo na posição da direita e esquerda.
 		setVetorGarfos(vet_garfos, estaComGarfo, numeroFilosofo);
-		
+		//log de console
+
 		System.out.println("Garfo1:  "+ numeroFilosofo +" Garfo2: "+((numeroFilosofo + 1) % 5) +"");
-		//Seta o estatus Comer
+		//Seta o estatus Comendo
 		filosofo.setStatus(1); 
 	}
 
-	public synchronized void liberar(Filosofo filosofo) 
+	public synchronized void liberar(Filosofo filosofo)
 	{
 		//variavel que define se o filosofo esta com garfo = Não está (false)
 		boolean estaComGarfo = false;

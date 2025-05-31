@@ -29,15 +29,15 @@ public class Filosofo extends Thread
 		switch (statusFilosofo) 
 		{
 		case 0:
-			//Pensar
+			//Pensando
 			jantarFilosofos.SetInfo(filosofo, 0);
 			break;
 		case 1:
-			//Comer
+			//Comendo
 			jantarFilosofos.SetInfo(filosofo, 1);
 			break;
 		case 2:
-			//Esperar
+			//Esperando
 			jantarFilosofos.SetInfo(filosofo, 2);
 			break;
 		}
@@ -76,7 +76,7 @@ public class Filosofo extends Thread
 		{
 			//Define o status como pensando
 			setStatus(0);
-			//Chama o método pesando
+			//Chama o método pensando
 			pensando();
 			//Tenta pegar os dois garfos
 			jantarFilosofos.garfos.pegar(this);
