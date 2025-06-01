@@ -1,7 +1,7 @@
 
 public class Garfos 
 {
-	//Esse array representa que temos uma quantidade total de 6 garfos. 
+	//Esse array representa que temos uma quantidade total de 5 garfos. 
 	//Esta identificando a posição do garfo em uso como TRUE  e livre como FALSE.
 	private boolean[] vet_garfos = new boolean[5]; 
 
@@ -29,7 +29,7 @@ public class Garfos
 		//4			4					(4 + 1) % 5 = 0 
 		while (vet_garfos[numeroFilosofo] || vet_garfos[((numeroFilosofo + 1) % 5)]) 
 		{
-			//Seta o status como Esperar
+			//Seta o status como Esperando
 			filosofo.setStatus(2);
 			try 
 			{
@@ -45,7 +45,7 @@ public class Garfos
 		setVetorGarfos(vet_garfos, estaComGarfo, numeroFilosofo);
 		//log de console
 
-		System.out.println("Garfo1:  "+ numeroFilosofo +" Garfo2: "+((numeroFilosofo + 1) % 5) +"");
+		System.out.println("Garfo Esquerdo:  "+ numeroFilosofo +" Garfo Direito: "+((numeroFilosofo + 1) % 5) +"");
 		//Seta o estatus Comendo
 		filosofo.setStatus(1); 
 	}
