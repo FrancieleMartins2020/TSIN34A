@@ -22,11 +22,11 @@ public class Garfos
 		//vet_garfos[numeroFilosofo] - verifica se o garfo da esquerda está ocupado
 		//vet_garfos[((numeroFilosofo + 1) % 5)]) - verifica se o garfo da direita está ocupado
 		//Filósofo	Garfo à esquerda	Garfo à direita (com % 5)
-		//1			1					(1 + 1) % 5 = 2
-		//0			0					(0 + 1) % 5 = 1
-		//2			2					(2 + 1) % 5 = 3
-		//3			3					(3 + 1) % 5 = 4
-		//4			4					(4 + 1) % 5 = 0 
+		//1		1			(1 + 1) % 5 = 2
+		//0		0			(0 + 1) % 5 = 1
+		//2		2			(2 + 1) % 5 = 3
+		//3		3			(3 + 1) % 5 = 4
+		//4		4			(4 + 1) % 5 = 0 
 		while (vet_garfos[numeroFilosofo] || vet_garfos[((numeroFilosofo + 1) % 5)]) 
 		{
 			//Seta o status como Esperando
