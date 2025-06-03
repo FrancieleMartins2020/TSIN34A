@@ -12,6 +12,7 @@ import javax.swing.border.EmptyBorder;
 // interface gráfica baseada na classe JFrame, que representa a janela principal da aplicação.
 public class Jantar extends JFrame 
 {	
+    private volatile int qtdRefeicoes = 0;
 	private Image mesa_fundo, filosofo_1, filosofo_2, filosofo_3, filosofo_4, filosofo_5;
 	
 	private Filosofo filosofo0, filosofo1, filosofo2, filosofo3, filosofo4;
@@ -139,8 +140,8 @@ public class Jantar extends JFrame
 		}
 		
 		repaint();
-	}	
-	
+	}
+    
 	public Jantar() 
 	{
 		setTitle("Jantar dos Filósofos -> Trabalho de Programação Concorrênte");
@@ -155,7 +156,7 @@ public class Jantar extends JFrame
 		setContentPane(contentPanel);
 		contentPanel.setLayout(null);
 		setResizable(false);
-				
+        
 		//Criação do garfo compartilhado
 		garfos = new Garfos();
 		
@@ -172,5 +173,6 @@ public class Jantar extends JFrame
 		filosofo2.start();
 		filosofo3.start();
 		filosofo4.start();
+		
 	}
 }

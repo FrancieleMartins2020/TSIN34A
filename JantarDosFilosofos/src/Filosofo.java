@@ -2,6 +2,14 @@
 //Classe Filosofo herda de Thread
 public class Filosofo extends Thread 
 {
+	// contador de refeições
+    private int qtdRefeicoes = 0;  
+
+    // Método para obter a quantidade de refeições feitas
+    public int getQtdRefeicoes() {
+        return qtdRefeicoes;
+    }
+    
 	//Identificador único do filosofo que serão 5 então vai 0 até 4
 	private int filosofo;
 	//Apresenta o stus atual de cada filosófo ( 0 = pensando, 1 = comendo, 2 = esperando)
@@ -82,8 +90,11 @@ public class Filosofo extends Thread
 			jantarFilosofos.garfos.pegar(this);
 			//Chama o método comendo
 			comendo();
+			// incrementa após comer
+            qtdRefeicoes++;  
 			//Libera os dois garfos após comer
-			jantarFilosofos.garfos.liberar(this);
+			jantarFilosofos.garfos.liberar(this);			
 		}
+        
 	}
 }

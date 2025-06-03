@@ -45,7 +45,7 @@ public class Garfos
 		setVetorGarfos(vet_garfos, estaComGarfo, numeroFilosofo);
 		//log de console
 
-		System.out.println("Garfo Esquerdo:  "+ numeroFilosofo +" Garfo Direito: "+((numeroFilosofo + 1) % 5) +"");
+		System.out.println("Filosófo " + numeroFilosofo + " Garfo 1:  "+ numeroFilosofo +" Garfo 2: "+((numeroFilosofo + 1) % 5) +"");
 		//Seta o estatus Comendo
 		filosofo.setStatus(1); 
 	}
