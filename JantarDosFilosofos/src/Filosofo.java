@@ -1,21 +1,15 @@
-
 //Classe Filosofo herda de Thread
 public class Filosofo extends Thread 
 {
 	// contador de refeições
     private int qtdRefeicoes = 0;  
+    private static final int MAX_REFEICOES = 1;
 
-    // Método para obter a quantidade de refeições feitas
-    public int getQtdRefeicoes() {
-        return qtdRefeicoes;
-    }
-    
 	//Identificador único do filosofo que serão 5 então vai 0 até 4
 	private int filosofo;
-	//Apresenta o stus atual de cada filosófo ( 0 = pensando, 1 = comendo, 2 = esperando)
-	private int status;
 	//Referência do objeto principal jantar
 	private Jantar jantarFilosofos;
+    private volatile boolean continuar = true;
 	
 	//Construtor da classe que recebe o identificador do filosofo e e a referencia a classe princial Jantar
 	public Filosofo(int numeroFilosofo, Jantar jantar)
@@ -23,7 +17,12 @@ public class Filosofo extends Thread
 		this.filosofo = numeroFilosofo;
 		this.jantarFilosofos = jantar;
 	}
-	
+
+    // Método para obter a quantidade de refeições feitas
+    public int getQtdRefeicoes() {
+        return qtdRefeicoes;
+    }
+    
 	//Retorna o identificador do filosofo
 	public int getFilosofo()
 	{
@@ -33,21 +32,20 @@ public class Filosofo extends Thread
 	//Realiza a atualização do status do filosofo e da imagem apresentada na aplicação
 	public void setStatus(int statusFilosofo)
 	{
-		status = statusFilosofo;
 		switch (statusFilosofo) 
 		{
-		case 0:
-			//Pensando
-			jantarFilosofos.SetInfo(filosofo, 0);
-			break;
-		case 1:
-			//Comendo
-			jantarFilosofos.SetInfo(filosofo, 1);
-			break;
-		case 2:
-			//Esperando
-			jantarFilosofos.SetInfo(filosofo, 2);
-			break;
+			case 0:
+				//Pensando
+				jantarFilosofos.SetInfo(filosofo, 0);
+				break;
+			case 1:
+				//Comendo
+				jantarFilosofos.SetInfo(filosofo, 1);
+				break;
+			case 2:
+				//Esperando
+				jantarFilosofos.SetInfo(filosofo, 2);
+				break;
 		}
 	}
 	
@@ -75,12 +73,16 @@ public class Filosofo extends Thread
 		{
 		}
 	}
-	
+
+    public void parar() {
+        continuar = false;
+        this.interrupt();
+    }
+    
 	//Este método é executado quando start() é chamado
 	public void run()
 	{
-		//realiza um ciclo infinito
-		while (true)
+        while (continuar && qtdRefeicoes < MAX_REFEICOES)
 		{
 			//Define o status como pensando
 			setStatus(0);
@@ -95,6 +97,7 @@ public class Filosofo extends Thread
 			//Libera os dois garfos após comer
 			jantarFilosofos.garfos.liberar(this);			
 		}
+        setStatus(0); // Finaliza pensando (parado)
         
 	}
 }

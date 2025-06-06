@@ -1,25 +1,37 @@
-public class MonitorRefeicoes implements Runnable {
-    private volatile int qtdRefeicoes = 0;
-    private boolean running = true;
+public class MonitorRefeicoes extends Thread { 
+    private Filosofo[] filosofos;
+    private static final int MAX_REFEICOES = 1;
 
-    public void setQtdRefeicoes(int qtd) {
-        this.qtdRefeicoes = qtd;
+    public MonitorRefeicoes(Filosofo[] filosofos) {
+        this.filosofos = filosofos;
     }
 
     @Override
     public void run() {
-        while (running) {
-            if (qtdRefeicoes >= 5) {
-                System.out.println("qtdRefeicoes chegou a 5! Encerrando...");
-                // Executa ação, por exemplo:
-                System.exit(0);
-                running = false; // para o loop, opcional após exit
-            }
+        boolean todosComeram = false;
+
+        while (!todosComeram) {
             try {
-                Thread.sleep(100);  // espera 100ms antes de checar de novo
+                Thread.sleep(500);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                break;
             }
+
+            todosComeram = true; // presumimos que todos já comeram
+
+            for (Filosofo f : filosofos) {
+                //System.out.println("Filosofo " + f.getFilosofo() + " refeicoes: " + f.getQtdRefeicoes());
+                if (f.getQtdRefeicoes() < MAX_REFEICOES) {
+                    todosComeram = false; // algum ainda não comeu o suficiente
+                    break;
+                }
+            }
+        }
+
+        System.out.println("Todos os filósofos comeram pelo menos " + MAX_REFEICOES + " vezes. Parando todos...");
+
+        for (Filosofo f : filosofos) {
+            f.parar();
         }
     }
 }

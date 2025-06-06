@@ -12,6 +12,8 @@ import javax.swing.border.EmptyBorder;
 // interface gráfica baseada na classe JFrame, que representa a janela principal da aplicação.
 public class Jantar extends JFrame 
 {	
+	private Filosofo[] filosofos;
+	private static final int MAX_REFEICOES = 2;
     private volatile int qtdRefeicoes = 0;
 	private Image mesa_fundo, filosofo_1, filosofo_2, filosofo_3, filosofo_4, filosofo_5;
 	
@@ -29,7 +31,7 @@ public class Jantar extends JFrame
 			{
 				try 
 				{
-					//Cria a interface e os filósofos
+					//Cria a interface
 					Jantar frame = new Jantar();
 					//Mostra a janela
 					frame.setVisible(true);
@@ -160,19 +162,20 @@ public class Jantar extends JFrame
 		//Criação do garfo compartilhado
 		garfos = new Garfos();
 		
-		 //Criação dos filósofos
-		filosofo0 = new Filosofo(0, this); 
-		filosofo1 = new Filosofo(1, this);
-		filosofo2 = new Filosofo(2, this);
-		filosofo3 = new Filosofo(3, this);
-		filosofo4 = new Filosofo(4, this);
-		
+		//Criação dos filósofos
+        filosofos = new Filosofo[5];
+        filosofos[0] = filosofo0 = new Filosofo(0, this);
+        filosofos[1] = filosofo1 = new Filosofo(1, this);
+        filosofos[2] = filosofo2 = new Filosofo(2, this);
+        filosofos[3] = filosofo3 = new Filosofo(3, this);
+        filosofos[4] = filosofo4 = new Filosofo(4, this);
+
 		//Início das threads (os filósofos começam a pensar e comer)
-		filosofo0.start();
-		filosofo1.start();
-		filosofo2.start();
-		filosofo3.start();
-		filosofo4.start();
+        for (Filosofo f : filosofos) {
+            f.start();
+        }
+
+        new MonitorRefeicoes(filosofos).start();	
 		
 	}
 }

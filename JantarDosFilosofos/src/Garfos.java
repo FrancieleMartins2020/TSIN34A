@@ -1,4 +1,3 @@
-
 public class Garfos 
 {
 	//Esse array representa que temos uma quantidade total de 5 garfos. 
@@ -45,7 +44,7 @@ public class Garfos
 		setVetorGarfos(vet_garfos, estaComGarfo, numeroFilosofo);
 		//log de console
 
-		System.out.println("Filosófo " + numeroFilosofo + " Garfo 1:  "+ numeroFilosofo +" Garfo 2: "+((numeroFilosofo + 1) % 5) +"");
+		System.out.println("Filosófo " + numeroFilosofo + " Garfo esquerda:  "+ numeroFilosofo +" Garfo direita: "+((numeroFilosofo + 1) % 5) +"");
 		//Seta o estatus Comendo
 		filosofo.setStatus(1); 
 	}
@@ -60,7 +59,8 @@ public class Garfos
 		
 		//Metodo responsável por liberar o  garfo na posição da direita e esquerda.
 		setVetorGarfos(vet_garfos, estaComGarfo, numeroFilosofo);
-		
+		System.out.println("Filosofo " + numeroFilosofo + " liberou os garfos: " + numeroFilosofo + " e " + ((numeroFilosofo + 1) % 5));
+
 		try 
 		{
 			//notifyAll() - faz com que todas as threads que estavam esperando em wait() (no método pegar())
