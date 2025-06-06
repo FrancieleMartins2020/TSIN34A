@@ -57,12 +57,51 @@ A interface exibe:
 Além da interface gráfica, o console mostra mensagens como:
 
 ```
-Filósofo 1 está pensando.
-Filósofo 1 está com fome.
-Filósofo 1 começou a comer.
-Filósofo 1 terminou de comer e voltou a pensar.
+Filosofo 0 refeicoes: 0
+Filosofo 0 refeicoes: 0
+Filosofo 0 refeicoes: 0
+Filosófo 3 Garfo esquerda:  3 Garfo direita: 4
+Filosofo 0 refeicoes: 0
+Filosófo 0 Garfo esquerda:  0 Garfo direita: 1
+Filosofo 0 refeicoes: 0
+Filosofo 0 refeicoes: 0
+Filosofo 0 refeicoes: 0
+Filosofo 0 refeicoes: 0
+Filosofo 3 liberou os garfos: 3 e 4
+Filosófo 2 Garfo esquerda:  2 Garfo direita: 3
+Filosofo 0 liberou os garfos: 0 e 1
+Filosófo 4 Garfo esquerda:  4 Garfo direita: 0
+Filosofo 0 refeicoes: 1
+Filosofo 1 refeicoes: 0
+Filosofo 0 refeicoes: 1
+Filosofo 1 refeicoes: 0
+Filosofo 0 refeicoes: 1
+Filosofo 1 refeicoes: 0
+Filosofo 0 refeicoes: 1
+Filosofo 1 refeicoes: 0
+Filosofo 0 refeicoes: 1
+Filosofo 1 refeicoes: 0
+Filosofo 2 liberou os garfos: 2 e 3
+Filosófo 1 Garfo esquerda:  1 Garfo direita: 2
+Filosofo 4 liberou os garfos: 4 e 0
+Filosofo 0 refeicoes: 1
+Filosofo 1 refeicoes: 0
+Filosofo 0 refeicoes: 1
+Filosofo 1 refeicoes: 0
+Filosofo 0 refeicoes: 1
+Filosofo 1 refeicoes: 0
+Filosofo 0 refeicoes: 1
+Filosofo 1 refeicoes: 0
+Filosofo 0 refeicoes: 1
+Filosofo 1 refeicoes: 0
+Filosofo 1 liberou os garfos: 1 e 2
+Filosofo 0 refeicoes: 1
+Filosofo 1 refeicoes: 1
+Filosofo 2 refeicoes: 1
+Filosofo 3 refeicoes: 1
+Filosofo 4 refeicoes: 1
+Todos os filósofos comeram pelo menos 1 vezes. Parando todos...
 
-Garfo1: 1 Garfo2: 1
 ```
 
 ## 🏛️ Sobre o Problema do Jantar dos Filósofos
