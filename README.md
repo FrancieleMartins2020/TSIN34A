@@ -1,6 +1,5 @@
 # 🧠🍝 Jantar dos Filósofos - Programação Concorrente
 
-![image](https://github.com/user-attachments/assets/2f7e653b-fc42-482e-9474-52f7815c2957)
 ![image](https://github.com/user-attachments/assets/52871cf5-e547-4a03-8063-d714b3be071b)
 
 
