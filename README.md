@@ -1,6 +1,8 @@
 # 🧠🍝 Jantar dos Filósofos - Programação Concorrente
 
 ![image](https://github.com/user-attachments/assets/2f7e653b-fc42-482e-9474-52f7815c2957)
+![image](https://github.com/user-attachments/assets/52871cf5-e547-4a03-8063-d714b3be071b)
+
 
 
 ## 📜 Descrição
@@ -39,7 +41,7 @@ javac *.java
 3. Execute o programa:
 
 ```bash
-java Main
+java Jantar
 ```
 
 ## 🎨 Interface Gráfica
@@ -57,49 +59,16 @@ A interface exibe:
 Além da interface gráfica, o console mostra mensagens como:
 
 ```
-Filosofo 0 refeicoes: 0
-Filosofo 0 refeicoes: 0
-Filosofo 0 refeicoes: 0
-Filosófo 3 Garfo esquerda:  3 Garfo direita: 4
-Filosofo 0 refeicoes: 0
 Filosófo 0 Garfo esquerda:  0 Garfo direita: 1
-Filosofo 0 refeicoes: 0
-Filosofo 0 refeicoes: 0
-Filosofo 0 refeicoes: 0
-Filosofo 0 refeicoes: 0
-Filosofo 3 liberou os garfos: 3 e 4
 Filosófo 2 Garfo esquerda:  2 Garfo direita: 3
 Filosofo 0 liberou os garfos: 0 e 1
 Filosófo 4 Garfo esquerda:  4 Garfo direita: 0
-Filosofo 0 refeicoes: 1
-Filosofo 1 refeicoes: 0
-Filosofo 0 refeicoes: 1
-Filosofo 1 refeicoes: 0
-Filosofo 0 refeicoes: 1
-Filosofo 1 refeicoes: 0
-Filosofo 0 refeicoes: 1
-Filosofo 1 refeicoes: 0
-Filosofo 0 refeicoes: 1
-Filosofo 1 refeicoes: 0
 Filosofo 2 liberou os garfos: 2 e 3
 Filosófo 1 Garfo esquerda:  1 Garfo direita: 2
 Filosofo 4 liberou os garfos: 4 e 0
-Filosofo 0 refeicoes: 1
-Filosofo 1 refeicoes: 0
-Filosofo 0 refeicoes: 1
-Filosofo 1 refeicoes: 0
-Filosofo 0 refeicoes: 1
-Filosofo 1 refeicoes: 0
-Filosofo 0 refeicoes: 1
-Filosofo 1 refeicoes: 0
-Filosofo 0 refeicoes: 1
-Filosofo 1 refeicoes: 0
+Filosófo 3 Garfo esquerda:  3 Garfo direita: 4
 Filosofo 1 liberou os garfos: 1 e 2
-Filosofo 0 refeicoes: 1
-Filosofo 1 refeicoes: 1
-Filosofo 2 refeicoes: 1
-Filosofo 3 refeicoes: 1
-Filosofo 4 refeicoes: 1
+Filosofo 3 liberou os garfos: 3 e 4
 Todos os filósofos comeram pelo menos 1 vezes. Parando todos...
 
 ```
