@@ -96,3 +96,5 @@ Desafios solucionados:
 ## 🤝 Contribuição
 
 Contribuições são bem-vindas! Sinta-se livre para abrir issues e pull requests.
+
+A referência para criar essa solução foi: https://github.com/daniel-2010/jantar-dos-filosofos
